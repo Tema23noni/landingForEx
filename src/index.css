@@ -1,13 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poor+Story&family=Raleway:wght@300&family=Roboto&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #333333;
+  font-family: 'Roboto', sans-serif;
+  @apply w-full h-full p-0 m-0
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cont{
+    max-width: 1110px;
+    padding: 0;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+@media screen and (max-width: 1449px) and (min-width:1270px){
+  .cont{
+    max-width: 950px;
+  }
+}
+@media screen and (max-width: 1269px) and (min-width:1220px){
+  .cont{
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 1219px) and (min-width:1120px){
+  .cont{
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 1119px) and (min-width:1020px){
+  .cont{
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 1019px) and (min-width:993px){
+  .cont{
+    max-width: 690px;
+  }
+}
+@media screen and (max-width: 992px) and (min-width:768px){
+  .cont{
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) and (min-width:577px){
+  .cont{
+    max-width: 100%;
+    margin: 0 20px;
+  }
 }

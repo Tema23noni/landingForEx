@@ -1,0 +1,95 @@
+.aboutTheatre{
+    @apply my-16;
+    h2{
+        @apply text-center my-16 text-5xl text-white uppercase;
+        span{
+            color: #D1A954;
+            
+        }
+    }
+    .info{
+        @apply flex justify-between items-start;
+        .info__best{
+            h3{
+                @apply my-5 font-bold text-xl text-white uppercase
+            }
+            p{
+                width: 420px;
+                height: 210px;
+                @apply text-white text-sm;
+            }
+       }
+        .info__numbers{
+            h3{
+                @apply my-5 font-bold text-xl text-white uppercase
+            }
+            p{
+                @apply text-white my-4 lowercase;
+                span{
+                    color: #D1A954;
+                    font-weight: 700;
+                }
+            }
+        }
+        .info__photo{
+            @apply my-5;
+        }
+    }
+}
+@media screen and (max-width: 1119px) and (min-width:769px){
+    .aboutTheatre{
+        .info{
+            @apply justify-evenly;
+        }
+    }
+    .info__photo{
+      display: none;
+    }
+  }
+@media screen and (max-width: 768px) and (min-width:577px){
+    .aboutTheatre{
+        .info{
+        @apply flex flex-col items-center justify-center;
+        .info__numbers{
+            @apply flex flex-col w-full justify-center items-center ;
+            .litlebitN{
+                @apply flex;
+                div{
+                    @apply mx-7;
+                }
+            }
+        }
+        .info__photo{
+        display: none;
+        }
+        }
+    }
+}
+@media screen and (max-width: 576px) and (min-width:375px){
+    .aboutTheatre{
+        .info{
+        @apply flex flex-col items-center justify-center;
+        .info__best{
+            @apply text-center;
+            p{
+                text-align: left;
+                width: 100%;
+                font-size: 14px;
+                padding: 0 20px;
+            }
+        }
+        .info__numbers{
+            @apply flex flex-col w-full justify-center items-center my-9 ;
+            .litlebitN{
+                @apply flex;
+                div{
+                    @apply mx-7;
+                }
+            }
+        }
+        .info__photo{
+        display: none;
+        }
+        }
+    }
+}

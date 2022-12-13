@@ -1,0 +1,231 @@
+.navigators{
+    @apply w-full  absolute z-10;
+
+        .navigate{
+            @apply flex justify-between my-10  ;
+            p{
+                transition: 300ms linear;
+                @apply  text-slate-50   uppercase tracking-widest font-bold cursor-pointer;
+            }
+            p:hover{
+                
+                color: #D1A954;
+            }
+            
+        }
+    
+}
+.Modal{
+    display: none;
+}
+.bur__cont{
+    display: none;
+}
+@media screen and (max-width: 992px) and (min-width:577px){
+    .navigators{
+        
+        .navigate{
+            display: none;
+        }
+        .bur__cont{
+            
+            @apply cursor-pointer fixed top-10 right-10 flex items-center justify-center;
+            .Open__Modal{
+                
+                @apply relative w-8 h-6 flex justify-center items-center;
+                span {
+                    transition: .5s;
+                    @apply w-8 h-1  bg-white rounded-sm;            
+                }
+                ::after{
+                    content: '';
+                    transition: .3s;
+                    @apply bottom-0 right-1 w-6 h-1 absolute bg-white rounded-sm;
+                }
+                ::before{
+                    content: '';
+                    transition: .3s;
+                    @apply top-0 right-1 w-6 h-1 absolute bg-white rounded-sm;
+                }
+            }
+            .Open__Modal.active{
+                
+                span {
+                    transition: .5s;
+                    @apply w-8 h-8  bg-white rounded-full;            
+                }
+                ::after{
+                    transition: .3s;
+                    @apply w-0
+                }
+                ::before{
+                    transition: .3s;
+                    @apply w-0
+                }
+            }
+        }
+
+    }
+    .Modal.active{
+        display: none;
+    }
+    .Modal{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+
+        background-color: #333333;
+        .Modal__cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            .link{
+                display: flex;
+                flex-direction: column;
+                div{
+                    margin: 20px 0;
+                    list-style: none;
+                    p{
+                        cursor: pointer;
+                        display: block; 
+                        text-align: center;
+                        font-size: 2.5em;
+                        color: white;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        transition: .5s;
+    
+                    }
+                    p::before{
+                        content: attr(data-menu);
+                        color:#D1A954;
+                        @apply absolute  left-0  w-full overflow-hidden -z-10  text-8xl uppercase;
+                        transition: 0.5s;
+                        
+                        opacity: 0;
+                        text-shadow: 0px 2px 10px #D1A954;
+                    }
+                    p:hover::before{
+                        opacity: 1;
+                    }
+                    p:hover{
+                        color: #33333300;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+
+}
+@media screen and (max-width: 576px) and (min-width:375px){
+    .navigators{
+        
+        .navigate{
+            display: none;
+        }
+        .bur__cont{
+            
+            @apply cursor-pointer fixed top-10 right-10 flex items-center justify-center;
+            .Open__Modal{
+                
+                @apply relative w-8 h-6 flex justify-center items-center;
+                span {
+                    transition: .5s;
+                    @apply w-8 h-1  bg-white rounded-sm;            
+                }
+                ::after{
+                    content: '';
+                    transition: .3s;
+                    @apply bottom-0 right-1 w-6 h-1 absolute bg-white rounded-sm;
+                }
+                ::before{
+                    content: '';
+                    transition: .3s;
+                    @apply top-0 right-1 w-6 h-1 absolute bg-white rounded-sm;
+                }
+            }
+            .Open__Modal.active{
+                
+                span {
+                    transition: .5s;
+                    @apply w-8 h-8  bg-white rounded-full;            
+                }
+                ::after{
+                    transition: .3s;
+                    @apply w-0
+                }
+                ::before{
+                    transition: .3s;
+                    @apply w-0
+                }
+            }
+        }
+
+    }
+    .Modal.active{
+        display: none;
+    }
+    .Modal{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+
+        background-color: #333333;
+        .Modal__cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            .link{
+                display: flex;
+                flex-direction: column;
+                div{
+                    margin: 20px 0;
+                    list-style: none;
+                    p{
+                        cursor: pointer;
+                        display: block; 
+                        text-align: center;
+                        font-size: 2.5em;
+                        color: white;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        transition: .5s;
+    
+                    }
+                    p::before{
+                        content: attr(data-menu);
+                        color:#D1A954;
+                        @apply absolute  left-0  w-full overflow-hidden -z-10  text-6xl uppercase;
+                        transition: 0.5s;
+                        
+                        opacity: 0;
+                        text-shadow: 0px 2px 10px #D1A954;
+                    }
+                    p:hover::before{
+                        opacity: 1;
+                    }
+                    p:hover{
+                        color: #33333300;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}

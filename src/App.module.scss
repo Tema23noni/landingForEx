@@ -1,0 +1,16 @@
+.error{
+    position: absolute;
+    top: 70%;
+    font-size: 10px;
+    @apply text-red-400 uppercase  my-3 mx-1; 
+}
+.input{
+    position: relative;
+    input{
+        outline: none;
+        background-color: #444444 ;
+        color: #989898;
+        border: 1px solid #616161;
+        @apply text-lg px-3 rounded-sm;
+    }
+}

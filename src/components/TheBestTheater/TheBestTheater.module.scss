@@ -1,0 +1,79 @@
+.bestTheater{
+    margin-top: 100px;
+    background: url('../../img/Rectangle\ 28.png') 0 0/100% 100% no-repeat  ;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rating{
+        @apply flex w-1/2 h-full justify-center items-center;
+        .rating__date{
+            p{
+                color: #D1A954;
+                @apply text-7xl font-bold mx-6;
+            }
+        }
+        .rating__text{
+            p{
+                @apply text-white text-4xl  font-bold;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) and (min-width:769px){
+    .bestTheater{
+        background: url('../../img/Rectangle\ 28.png') 50% 50%/100% 100% no-repeat  ;
+        
+
+        .rating{
+            @apply w-2/3;
+            .rating__text{
+                p{
+                    @apply text-white text-3xl  font-bold;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width:577px){
+    .bestTheater{
+        background: url('../../img/Rectangle\ 28.png') 50% 50%/100% 100% no-repeat  ;
+        
+
+        .rating{
+            @apply w-4/5;
+            .rating__text{
+                p{
+                    @apply text-white text-2xl  font-bold;
+                }
+            }
+        }
+  
+    }
+}
+@media screen and (max-width: 576px) and (min-width:375px){
+    .bestTheater{
+        background: url('../../img/Rectangle\ 28.png') 50% 50%/100% 100% no-repeat  ;
+        
+
+        .rating{
+            @apply w-4/5;
+            .rating__date{
+                p{
+                    @apply text-5xl;
+                }
+            }
+            .rating__text{
+                p{
+                    @apply text-white text-2xl  font-bold;
+                }
+            }
+        }
+  
+    }
+}

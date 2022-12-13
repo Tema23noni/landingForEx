@@ -1,0 +1,120 @@
+.mainPage{
+    background: url('../../img/firstpage.png') 100% 100%;
+    @apply w-full h-screen bg-top bg-cover;
+    .posit__contact{
+        background: rgba($color: #333333, $alpha: .75);
+        @apply top-0 left-0 h-full w-40 fixed z-30;
+        .Contacts{
+            @apply flex h-full justify-end py-5 flex-col w-full items-center;
+            .Contacts__block{
+                @apply h-36;
+                .Contats__text{
+                    @apply block -rotate-90 text-lg text-white uppercase font-bold w-72  break-normal;                    
+                }
+            }
+            .Contacts__line{
+                @apply bg-white w-1 h-20 my-7;
+            }
+            .social{
+                @apply flex flex-col my-5 justify-between h-52;
+                img{
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+    .swithingPosters{
+        @apply flex justify-between items-center w-full h-full;
+        .poster__about{
+            width: 540px;
+            
+
+            .nameOfPerform{
+                @apply text-white uppercase font-bold tracking-wider text-6xl my-6 p-0
+            }
+            .aboutPerform{
+                line-height: 150%;
+                @apply text-white my-12
+            }
+            .btn__poster{
+                background: #D1A954;
+                @apply w-40 h-12 z-20 text-white cursor-pointer rounded-sm uppercase font-bold tracking-widest;
+                transition: .3s;
+            }
+            .btn__poster:hover{
+                box-shadow: 1px 1px 20px #D1A954;
+            }
+        }
+        .poster{
+            img{
+                width: 350px;
+                height: 490px;
+            }
+            .switherPost{
+                @apply flex justify-between w-full my-6;
+                button{
+                    @apply relative hover:text-slate-200 text-white uppercase text-lg font-bold tracking-widest
+                }
+                .prev::before{
+                    content: '';
+                    @apply py-1 px-3 mx-1;
+                    background: url('../../img/arrowLeft.png') no-repeat top left/100% 100% ;
+                    filter: invert(1);
+                }
+                .next::after{
+                    content: '';
+                    @apply py-1 px-3 mx-1;
+                    background: url('../../img/\ arrowRight.png') no-repeat 0 0/100% 100% ;
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1119px) and (min-width:992px){
+    .poster{
+      display: none;
+    }
+
+    .mainPage{
+        .swithingPosters{
+            @apply justify-center
+        }
+        .posit__contact{
+            @apply absolute
+        }    
+    }
+    
+  }
+@media screen and (max-width: 992px) and (min-width:577px){
+    .poster{
+      display: none;
+    }
+
+    .mainPage{
+        .swithingPosters{
+            @apply justify-center
+        }
+        .posit__contact{
+            display: none;
+        }    
+    }
+    
+  }
+@media screen and (max-width: 576px) and (min-width:375px){
+    .poster{
+        display: none;
+    }
+    .mainPage{
+        .swithingPosters{
+            @apply justify-center;
+            .poster__about{
+                width: 100%;
+                margin: 0 20px;
+            }
+        }
+        .posit__contact{
+            display: none;
+        }
+    }
+} 
