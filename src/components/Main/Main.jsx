@@ -1,8 +1,8 @@
 import React from 'react'
 import cl from './Main.module.scss';
-import content from '../../App.module.scss';
+
 import Contacts from './Contacts';
-import img from '../../img/image 3.png';
+import img from '../../img/image3.png';
 const Main = ({linkRef}) => {
   return (
     <div ref={linkRef} className={cl.mainPage}>
